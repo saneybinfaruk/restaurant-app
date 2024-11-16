@@ -34,7 +34,9 @@ const SectionTwo = () => {
         </p>
 
         <div className="w-full flex items-center gap-5 md:gap-10 mt-10 bg-green-100">
-          <div><BgButton label="about more" /></div>
+          <div>
+            <BgButton label="about more" />
+          </div>
           <div className="flex items-center gap-2">
             <FiPhoneCall color="#BD1F17" size={24} />
             <p className="text-sm md:text-lg font-robotoBold text-[#0A1425]">
@@ -94,18 +96,18 @@ const SectionTwo = () => {
   };
 
   return (
-    <section className="p-8 w-full md:h-[864px] flex flex-col md:justify-center relative overflow-hidden">
-      <div className="w-full max-w-[1321px] mx-auto md:h-[460px] flex flex-col md:flex-row gap-9 md:gap-20 relative">
+    <section className="p-8 w-full min-h-[864px] flex flex-col md:justify-center relative overflow-hidden">
+      <div className="w-full max-w-[1321px] mx-auto min-h-[460px] flex flex-col lg:flex-row gap-9 md:gap-6 lg:gap-10 xl:gap-20 relative">
         <div className="relative">
           <MarketExperiences />
           <img
             src={cousine}
             alt="cousine"
-            className="w-full h-[270px] md:w-[617px] md:h-full object-cover"
+            className="w-full h-[270px] lg:w-[617px] md:h-full object-cover"
           />
         </div>
 
-        <div className="w-full md:w-[624px]">
+        <div className="w-full lg:w-[624px]">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -119,13 +121,13 @@ const SectionTwo = () => {
               {tab.label}
             </button>
           ))}
-          <div className="border border-[#B52B1D]"></div>
+          <div className="w-full border border-[#B52B1D]"></div>
 
           <div>{tabsDetails[selectedTab]}</div>
         </div>
       </div>
 
-      <div className="max-w-[1321px] w-full mt-16 flex flex-col md:flex-row items-start md:items-center justify-between self-center gap-10 md:gap-0">
+      <div className="max-w-[1321px] w-full mt-16 flex flex-col lg:flex-row items-start lg:items-center justify-between self-center gap-10 lg:gap-0">
         {infos.map((info) => (
           <Item Icon={info.icon} title={info.title} subTitle={info.subTitle} />
         ))}
@@ -134,7 +136,7 @@ const SectionTwo = () => {
       <img
         src={cousine2}
         alt="cousine 2"
-        className="hidden md:flex w-[364px] h-[340px] absolute -right-60 bottom-20 -rotate-12"
+        className="hidden 2xl:flex w-[364px] h-[340px] absolute -right-60 bottom-20 -rotate-12"
       />
     </section>
   );
