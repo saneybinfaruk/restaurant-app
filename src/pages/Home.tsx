@@ -8,12 +8,12 @@ import SectionTwo from "../components/SectionTwo";
 const Home = () => {
   return (
     <section>
-      {/* <SectionOne /> */}
-      {/* <SectionTwo /> */}
-      {/* <SectionThree /> */}
-      {/* <SectionFour /> */}
+      <SectionOne />
+      <SectionTwo />
+      <SectionThree />
+      <SectionFour />
       <SectionFive/>
-      {/* <Footer/> */}
+      <Footer/>
     </section>
   );
 };
